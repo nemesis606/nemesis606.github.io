@@ -1,0 +1,84 @@
+@media screen and (max-width: 768px)
+
+  .navbar.nav.menu li
+    width: calc(100% - 20px)
+
+  .navbar.nav.menu li:nth-child(2)
+    margin-top: 35px
+
+  .navbar.nav.menu li:not(:last-child)
+    margin-bottom: 10px
+
+  .navbar.nav.menu, body.canvas:before
+    position: fixed
+    top: 0
+    height: 100%
+
+  .navbar.nav.menu:not(.color)
+    background-color: rgba(255,255,255,1)
+
+  .navbar.nav.menu:not(.left-canvas),.navbar.nav.menu.right-canvas
+    right: -100%
+    border-left: solid 2px
+
+  .navbar.nav.menu:not(.right-canvas),.navbar.nav.menu.left-canvas
+    left: -100%
+    border-right: solid 2px
+
+  .navbar.nav.menu.left-canvas:not(.color), .navbar.nav.menu.right-canvas:not(.color)
+    border-color: #DDDDDD
+
+  .navbar.nav.menu
+    width: calc(100% - 2px)
+    max-width: 50%
+
+  .navbar.nav li
+    position: relative
+    z-index: 999
+
+  .navbar.nav li, .navbar.nav li:after
+    -webkit-transition: all 1s linear
+    -moz-transition: all 1s linear
+    -ms-transition: all 1s linear
+    -o-transition: all 1s linear
+    transition: all 1s linear
+
+  .navbar.nav li:after, nav li a, .navbar:after
+    display: block
+
+  .navbar.nav li:after
+    content: ""
+    height: 1px
+    margin: 10px -10px 0
+
+  .navbar.nav li:hover::after, .navbar.nav li:active a
+    position: relative
+    z-index: 999
+
+  .navbar.nav:not(.menu-color-custom) li:after
+    background-color: #DDDDDD
+
+  .navbar:after
+    content: ""
+    clear: both
+
+  .navbar.nav li a
+    padding: 10px 10px
+    margin: -10px -10px
+
+  body.activate-canvas
+    position: absolute
+
+  body.activate-canvas,div.shadow-canvas
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+
+  div.shadow-canvas
+    position: fixed
+    z-index: 1
+    background-color: rgba(0,0,0,0.9)
+    left: 0
+    right: 0
+
