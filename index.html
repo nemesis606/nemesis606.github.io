@@ -1,87 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head lang="pt-br">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, use-scalable=no"/>
-    <title>Flex framework</title>
-    <link rel="stylesheet" href="css/flex-framework.css"/>
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/flex.source.js"></script>
-</head>
-<body>
-    <header class="header shadow">
-        <section class="container">
-            <nav class="navbar valign-left">
-                <button class="mobile-button" data-target="#menu">
-                    button
-                </button>
-                <ul class="navbar nav menu left-canvas" id="menu">
-                    <button class="mobile-close-menu">
-                        X
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, use-scalable=no"/>
+        <title>Flex framework</title>
+        <link rel="stylesheet" href="css/flex-framework.css"/>
+        <link rel="stylesheet" href="css/chartist.min.css"/>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <!--<script type="text/javascript" src="js/flex.source.js"></script>-->
+        <script type="text/javascript" src="js/plugins/chartist.min.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+    </head>
+    <body>
+        <header class="header shadow">
+            <section class="container">
+                <nav class="navbar valign-left">
+                    <button class="mobile-button" data-target="#menu">
+                        button
                     </button>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Docs</a></li>
-                    <li><a href="">Codex</a></li>
-                    <li><a href="">“ Contatos ”</a></li>
-                    <li><a href="">»Reclamações</a></li>
-                </ul>
-            </nav>
+                    <ul class="navbar nav menu left-canvas" id="menu">
+                        <button class="mobile-close-menu">
+                            X
+                        </button>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre Mim</a></li>
+                        <li><a href="">Fale Comigo</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <section class="container">
+            <div class="row">
+                <section class="col l8 m8 s8 i12">
+                    <h3 class="text-center">
+                        Skills
+                    </h3>
+                    <div class="ct-chart ct-perfect-fourth"></div>
+                </section>
+                <aside class="col l4 dark">
+                    <p>
+                        Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! E que abundância meu irmão viuu!! Assim você vai matar o papai. Só digo uma coisa, Domingo ela não vai! Danadaa!! Vem minha odalisca, agora faz essa cobra coral subir!!! Pau que nasce torto, Nunca se endireita. Tchannn!! Tchannn!! Tu du du pááá! Eu gostchu muitchu, heinn! danadinha! Mainhaa! Agora use meu lorem ipsum ordinária!!! Olha o quibeee! rema, rema, ordinária!.
+                        Você usa o Lorem Ipsum tradicional? Sabe de nada inocente!! Conheça meu lorem que é Tchan, Tchan, Tchannn!! Txu Txu Tu Paaaaa!! Vem, vem ordinária!! Venha provar do meu dendê que você não vai se arrepender. Só na sacanageeem!! Eu gostchu muitchu, heinn! Eitchaaa template cheio de abundância danadaaa!! Assim você mata o papai hein!? Etâaaa Mainhaaaaa...me abusa nesse seu layout, me gera, me geraaaa ordinária!!! Só na sacanagem!!!! Venha provar do meu dendê Tu du du pááá!.
+                        Mas que abundância meu irmãooo!!! Esse é seu Layout danadaaa!??? Sabe de nada inocente!! Vem, vem, vem ordinária, provar do meu dendê!! Eu gostxuu muitxuu desse seu Layout!! Etâ danadaaaa!! Tá tão lindo que vou falar em inglês só pra você mainhaaa!! Know nothing innocent. Ordinary!! Txhann Txhann, Txu txu tu paaa!! Damned. Only in Slutty!! Abundance that my borther!! Tchan, Tchan, Tchan...Tu tu tu pa!!!!  .
+                    </p>
+                </aside>
+            </div>
         </section>
-    </header>
-    <section class="container">
-        <!--<h1>-->
-            <!--<i class="flex-icons-google-plus"></i>-->
-            <!--<i class="flex-icons-facebook"></i>-->
-            <!--<i class="flex-icons-deezer"></i>-->
-            <!--<i class="flex-icons-spotify"></i>-->
-            <!--<i class="flex-icons-dropbox"></i>-->
-            <!--<i class="flex-icons-dribbble"></i>-->
-            <!--<i class="flex-icons-vimeo"></i>-->
-            <!--<i class="flex-icons-linkedin"></i>-->
-            <!--<i class="flex-icons-twitter"></i>-->
-            <!--<i class="flex-icons-pinterest"></i>-->
-            <!--<i class="flex-icons-tumblr"></i>-->
-            <!--<i class="flex-icons-flickr-logo"></i>-->
-            <!--<i class="flex-icons-delicious"></i>-->
-            <!--<i class="flex-icons-vine-logo"></i>-->
-            <!--<i class="flex-icons-instagram"></i>-->
-            <!--<i class="flex-icons-youtube"></i>-->
-            <!--<i class="flex-icons-myspacing"></i>-->
-            <!--<i class="flex-icons-baidu"></i>-->
-        <!--</h1>-->
-        <div class="col l6 m10 t4 s2 i12">
-            <p>
-                l3
-            </p>
-        </div>
-        <div class="col l6 m8 t6 s2 i12">
-            <p>
-                l9
-            </p>
-        </div>
-        <div class="col l4 m5 t12 s2 i12"><p>l4</p></div>
-        <div class="col l3 m1 t8 s2 i12">
-            <p>
-                l3
-            </p>
-        </div>
-        <div class="col l6 m12 t12 s2 i12">
-            <p>l6</p>
-        </div>
-        <div class="col l10 m12 t12 s12 i12">
-            <p>Este é meramente um texto de teste, oK</p>
-        </div>
-    </section>
-    <section class="container">
-        <section class="row">
-            <form action="">
-                <input type="name"/>
-                <input type="password"/>
-                <input type="email"/>
-                <input type="submit" value="Enviar"/>
-            </form>
-        </section>
-    </section>
-</body>
+    </body>
 </html>
