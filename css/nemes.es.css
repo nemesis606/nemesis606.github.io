@@ -3,7 +3,14 @@ img {
 
 a {
   text-decoration: none;
-  color: #DDDDDD; }
+  color: #2c3e50; }
+
+h1 {
+  font-family: "Helvetica UE light", sans-serif;
+  font-weight: 100; }
+
+mz-paragrafo * {
+  vertical-align: middle; }
 
 a:hover, mz-link:hover, .mz-profile-image:hover {
   -webkit-animation-duration: 0.75s;
@@ -28,5 +35,44 @@ mz-link:hover {
   margin: -10px 0;
   overflow: hidden;
   border-radius: 100%; }
+
+.mz-big-title {
+  font-family: "Open Sans", sans-serif;
+  font-stretch: condensed;
+  font-size: 44px;
+  font-weight: 300; }
+
+.mz-txt-left {
+  text-align: left; }
+
+.mz-align-right {
+  display: inline;
+  float: right; }
+
+.mz-padding-box {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.mz-skills-box {
+  padding: 15px; }
+
+.mz-skills-box li {
+  line-height: 40px; }
+
+.color.green {
+  background-color: #009688;
+  color: #FFFFFF; }
+
+.color.cyan {
+  background-color: #2CFED6;
+  color: #333333; }
+
+.color.olive {
+  background-color: #9de945;
+  color: #333333; }
+
+.color.midnight-blue {
+  background-color: #2c3e50;
+  color: #FFFFFF; }
 
 /*# sourceMappingURL=nemes.es.css.map */
