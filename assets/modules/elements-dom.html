@@ -1,0 +1,139 @@
+<link rel="import"
+      href="../components/polymer/polymer.html"/>
+<dom-module id="mz-cabecalho">
+    <style>
+        :host{
+            display: block;
+            border: none;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-cabecalho"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-paragrafo">
+    <style>
+        :host{
+            font-family: "Helvetica UE light", sans-serif;
+            font-weight: 100;
+            display: inline;
+            font-size: 14px;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-paragrafo"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-lista">
+    <style>
+        :host{
+            display: block;
+            list-style: none;
+        }
+
+        :host:after{
+            clear: both;
+            display: block;
+            content: "";
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-lista"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-link">
+    <style>
+        :host {
+            display: inline-block;
+            float: left;
+            padding: 0 5px;
+            font-size: 18px;
+            line-height: 40px;
+            color: #009688;
+            cursor: pointer;
+            font-family: "Open Sans", sans-serif;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-link"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-indice">
+    <style>
+        :host{
+            display: block;
+            list-style: none;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-indice"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-titulo">
+    <style>
+        :host{
+            display: inherit;
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 100;
+            font-size: 24px;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-titulo"
+        });
+    </script>
+</dom-module>
+
+<dom-module id="mz-perfil">
+    <style>
+        :host{
+            display: block;
+            margin: -10px 0;
+            padding: 10px 0;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: "mz-perfil"
+        });
+    </script>
+</dom-module>
+
