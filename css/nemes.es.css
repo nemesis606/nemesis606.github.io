@@ -13,6 +13,9 @@ h1 {
   font-family: "Helvetica UE light", sans-serif;
   font-weight: 100; }
 
+mz-cabecalho {
+  border-bottom: solid 1px #cccccc; }
+
 mz-paragrafo * {
   vertical-align: middle; }
 
@@ -21,10 +24,11 @@ address {
   font-family: "Roboto Thin", sans-serif; }
 
 #address {
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 15px; }
 
 strong {
-  color: #3498db; }
+  color: #ecf0f1; }
 
 a:hover, mz-link:hover, .flex-icons-star:hover,
 .flex-icons-star-contorn:hover {
@@ -47,8 +51,6 @@ a:hover, .flex-icons-star-contorn:hover {
   border-bottom: solid 1px #009688; }
 
 .mz-float-dates-contact {
-  position: absolute;
-  top: 0;
   width: 100%;
   z-index: 99;
   background-color: rgba(255, 255, 255, 0.8);
@@ -65,17 +67,24 @@ mz-link:hover {
   -webkit-animation-name: tada;
   animation-name: tada; }
 
-.mz-profile-image {
-  width: 90px;
-  height: 90px;
-  float: left;
+.mz-profile-image, .mz-profile-image-map {
   overflow: hidden;
   border: solid 3px #009688; }
 
-.mz-profile-image:not(.mz-no-radius) {
+.mz-profile-image-map {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto; }
+
+.mz-profile-image {
+  width: 90px;
+  height: 90px;
+  float: left; }
+
+.mz-profile-image:not(.mz-no-radius), .mz-profile-image-map {
   border-radius: 100%; }
 
-.mz-profile-image:hover {
+.mz-profile-image:hover, .mz-profile-image-map:hover {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand; }
 
@@ -93,8 +102,9 @@ mz-link:hover {
   float: right; }
 
 .mz-padding-box {
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  position: relative;
+  top: -7px; }
 
 .mz-skills-box {
   padding: 15px; }
@@ -112,11 +122,35 @@ mz-link:hover {
 
 .mz-map-address {
   width: 100%;
-  height: 650px; }
+  height: 500px; }
+
+.mz-box-map {
+  padding: 15px;
+  width: calc(100% - 30px); }
+
+.mz-box-map:after {
+  clear: both;
+  display: block;
+  content: ""; }
+
+.mz-box-map img {
+  max-width: 100%; }
+
+.gm-style-iw {
+  left: 29px !important; }
+
+.mz-text-center {
+  text-align: center; }
+
+.mz-button {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  background-color: #3498db; }
 
 .color.green {
   background-color: #009688;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  border-top: solid 4px #333; }
 
 .color.cyan {
   background-color: #2CFED6;
@@ -124,7 +158,8 @@ mz-link:hover {
 
 .color.olive {
   background-color: #9de945;
-  color: #333333; }
+  color: #333333;
+  border-top: solid 4px #333; }
 
 .color.midnight-blue {
   background-color: #2c3e50;

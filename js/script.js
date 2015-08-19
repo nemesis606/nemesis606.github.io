@@ -28,7 +28,7 @@ $(document).ready(function(){
         var lon = c.coords.longitude;
 
     var directionsService = new google.maps.DirectionsService();
-    directionsDisplay = new google.maps.DirectionsRenderer();
+    directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers : true});
 
     var map = new google.maps.Map(document.getElementById('map'),{
         zoom: 18,
@@ -160,26 +160,96 @@ $(document).ready(function(){
             featureType: "transit.station.airport",
             elementType: "geometry.fill",
             stylers: [
-                { color: "#4169E1" }
+                { color: "#FFFFFF" }
             ]
         }
     ];
 
     map.setOptions({styles: styles});
 
+    var markInitial = new google.maps.Marker({
+        position: {lat: lat, lng: lon},
+        map: map,
+        icon: "/nemesis606.github.io/assets/img/circular28.png"
+    });
+
     $("#address").click(function(){
+        map.setOptions({zoom: 8});
+        window.location.assign("#map");
+        markInitial.setMap(null);
         directionsDisplay.setMap(map);
         var rota = {
             origin: {lat: lat,lng: lon},
             destination: {lat: -23.461301,lng: -46.434944},
             travelMode: google.maps.TravelMode.WALKING
         };
+
+        var contentBoxDestiny ='<div class="mz-box-map">'+
+            '<figure class="mz-profile-image-map animated">'+
+            '<img src="/nemesis606.github.io/assets/img/bsIaPEiM.jpeg" alt=""/>'+
+            '</figure>'+
+            '</div>';
+
+        var icons = {
+            start: new google.maps.MarkerImage(
+
+                '/nemesis606.github.io/assets/img/circular28.png',
+
+                new google.maps.Size( 24, 24 ),
+
+                new google.maps.Point( 0, 0 ),
+
+                new google.maps.Point( 10, 15)
+            ),
+            end: new google.maps.MarkerImage(
+
+                '/nemesis606.github.io/assets/img/location56.png',
+
+                new google.maps.Size( 24, 24 ),
+
+                new google.maps.Point( 0, 0 ),
+
+                new google.maps.Point( 10, 23 )
+            )
+        };
+
         directionsService.route(rota, function(result,status){
             if (status == google.maps.DirectionsStatus.OK) {
+
                 directionsDisplay.setDirections(result);
+
+                var leg = result.routes['0'].legs['0'];
+
+                makeMarker( leg.start_location, icons.start, "title", false );
+
+                makeMarker( leg.end_location, icons.end, 'title', contentBoxDestiny );
+
             }
         });
     });
+
+    function makeMarker( position, icon, title, infowindowcode ) {
+        var mark = new google.maps.Marker({
+            position: position,
+            map: map,
+            draggable: false,
+            icon: icon,
+            title: title
+        });
+
+        if (infowindowcode) {
+            var infowindow = new google.maps.InfoWindow({
+                content: infowindowcode
+            });
+
+            infowindow.open(map, mark);
+        }
+        mark.addListener('click', function(){
+
+            infowindow.open(map, mark);
+
+        });
+    }
 
     //directionsDisplay.setMap(map);
     //var rota = {
