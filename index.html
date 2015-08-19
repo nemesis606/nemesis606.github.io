@@ -7,16 +7,17 @@
         <script src="assets/components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery.easyaudioeffects.1.0.0.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkPvT-OuLSK4x-22w-PQX0xPL3QYbx2_E" type="text/javascript"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <link rel="stylesheet" href="css/flex-framework.css"/>
         <link rel="stylesheet" href="css/nemes.es.css"/>
         <link rel="stylesheet" href="css/animate.css"/>
         <link rel="import" href="assets/modules/elements-dom.html"/>
     </head>
-    <body>
+    <body id="body">
         <mz-cabecalho class="header">
             <section class="container">
-                <figure class="mz-profile-image rubberBand animated">
+                <figure class="mz-profile-image animated">
                     <img src="assets/img/bsIaPEiM.jpeg" alt=""/>
                 </figure>
                 <nav class="navbar valign-right">
@@ -35,8 +36,10 @@
             </section>
         </mz-cabecalho>
 
-        <section class="container">
-                <mz-titulo>
+
+        <mz-titulo class="mz-content-map">
+            <div class="mz-float-dates-contact">
+                <section class="container">
                     <mz-paragrafo class="mz-big-title">
                         Mizael Web Dev
                     </mz-paragrafo>
@@ -49,11 +52,20 @@
                             <a href="mailto: zxmaster01@gmail.com">
                                 <i class="flex-icons-send-line"></i>
                                 zxmaster01@gmail.com
-                            </a>
+                            </a><br/>
+                            <address id="address">
+                                <p>
+                                    <strong>Rua:</strong> <span>Pernambuco Nº: 05,</span> <strong> Bairro: </strong> <span>Jardim Vermelhão - Guarulhos, SP</span>
+                                </p>
+                            </address>
                         </small>
                     </mz-paragrafo>
-                </mz-titulo>
-        </section>
+                </section>
+            </div>
+            <address id="map" class="mz-map-address">
+
+            </address>
+        </mz-titulo>
 
         <section class="container mz-padding-box">
             <div class="col l6 m6 t12 i12">
