@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function(){
-    $("up").click(function(e){
+    $("#up").click(function(e){
         $("body").animate({scrollTop: 0}, '1000');
     });
     $(".mz-profile-image").easyAudioEffects(
