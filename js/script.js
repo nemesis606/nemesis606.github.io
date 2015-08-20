@@ -6,6 +6,15 @@ $(document).ready(function(){
     $("#up").click(function(e){
         $("body").animate({scrollTop: 0}, '1000');
     });
+
+    $(window).scroll(function(e){
+        if ($(this).scrollTop() > 300) {
+            $("#up").show();
+        } else if ($(this).scrollTop() < 100) {
+            $("#up").hide();
+        }
+    });
+
     $(".mz-profile-image").easyAudioEffects(
         {
             ogg: "assets/sounds/chime.ogg",
