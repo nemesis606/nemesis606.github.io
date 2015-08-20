@@ -220,7 +220,7 @@ $(document).ready(function(){
         var icons = {
             start: new google.maps.MarkerImage(
 
-                '/nemesis606.github.io/assets/img/circular28.png',
+                '/assets/img/circular28.png',
 
                 new google.maps.Size( 24, 24 ),
 
@@ -230,7 +230,7 @@ $(document).ready(function(){
             ),
             end: new google.maps.MarkerImage(
 
-                '/nemesis606.github.io/assets/img/location56.png',
+                '/assets/img/location56.png',
 
                 new google.maps.Size( 24, 24 ),
 
@@ -255,40 +255,28 @@ $(document).ready(function(){
         });
     });
 
-    function makeMarker( position, icon, title, infowindowcode ) {
-        var mark = new google.maps.Marker({
-            position: position,
-            map: map,
-            draggable: false,
-            icon: icon,
-            title: title
-        });
-
-        if (infowindowcode) {
-            var infowindow = new google.maps.InfoWindow({
-                content: infowindowcode
+        function makeMarker( position, icon, title, infowindowcode ) {
+            var mark = new google.maps.Marker({
+                position: position,
+                map: map,
+                draggable: false,
+                icon: icon,
+                title: title
             });
 
-            infowindow.open(map, mark);
+            if (infowindowcode) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: infowindowcode
+                });
+
+                infowindow.open(map, mark);
+            }
+            mark.addListener('click', function(){
+
+                infowindow.open(map, mark);
+
+            });
         }
-        mark.addListener('click', function(){
-
-            infowindow.open(map, mark);
-
-        });
-    }
-
-    //directionsDisplay.setMap(map);
-    //var rota = {
-    //    origin: {lat: lat,lng: lon},
-    //    destination: {lat: -23.461301,lng: -46.434944},
-    //    travelMode: google.maps.TravelMode.WALKING
-    //};
-    //directionsService.route(rota, function(result,status){
-    //    if (status == google.maps.DirectionsStatus.OK) {
-    //        directionsDisplay.setDirections(result);
-    //    }
-    //});
     }
 
     function erro () {
