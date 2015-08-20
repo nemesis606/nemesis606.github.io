@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-    <head lang="pt-br">
+<html lang="pt-br">
+    <head>
+        <title>Flex framework</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, use-scalable=no"/>
-        <title>Flex framework</title>
         <script src="assets/components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery.easyaudioeffects.1.0.0.min.js"></script>
@@ -15,27 +15,30 @@
         <link rel="import" href="assets/modules/elements-dom.html"/>
     </head>
     <body id="body">
-        <header>
-            <p class="text-center">
-                basb
-            </p>
+        <header id="alert_header">
         </header>
-        <mz-cabecalho class="header">
+        <mz-cabecalho class="header mz-header">
             <section class="container">
                 <figure class="mz-profile-image animated">
                     <img src="assets/img/bsIaPEiM.jpeg" alt=""/>
                 </figure>
                 <nav class="navbar valign-right">
-                    <button class="mobile-button" data-target="#menu">
-                        <i class="flex-icons-menu"></i>
-                    </button>
                     <mz-lista id="menu" class="bounce animated">
-                        <button class="mobile-close-menu">
-                            X
-                        </button>
-                        <mz-link>Home</mz-link>
-                        <mz-link>Sobre Mim</mz-link>
-                        <mz-link>Fale Comigo</mz-link>
+                        <mz-link>
+                            <a href="https://github.com/nemesis606" target="_blank" class="mz-github">
+                                <i class="flex-icons-github"></i>
+                            </a>
+                        </mz-link>
+                        <mz-link>
+                            <a href="https://www.facebook.com/mizael.master" target="_blank" class="mz-facebook">
+                                <i class="flex-icons-facebook"></i>
+                            </a>
+                        </mz-link>
+                        <mz-link>
+                            <a target="_blank" href="https://plus.google.com/u/1/108846212994304804947/posts/p/pub" class="mz-google-plus">
+                                <i class="flex-icons-google-plus"></i>
+                            </a>
+                        </mz-link>
                     </mz-lista>
                 </nav>
             </section>
@@ -54,7 +57,7 @@
                                 <i class="flex-icons-phone-circle"></i>
                                 96501-6462 -
                             </span>
-                            <a href="mailto: zxmaster01@gmail.com">
+                            <a class="mail" href="mailto: zxmaster01@gmail.com">
                                 <i class="flex-icons-send-line"></i>
                                 zxmaster01@gmail.com
                             </a>
@@ -65,7 +68,7 @@
         </mz-titulo>
 
         <section class="container mz-padding-box">
-            <div class="col l6 m6 t12 i12">
+            <div class="col l6 m6 t12 s12 i12">
                 <section class="color green mz-skills-box zoomInLeft animated">
                     <mz-paragrafo>
                         <i class="flex-icons-radar"></i>
@@ -137,10 +140,22 @@
                     </mz-lista>
                 </section>
             </div>
-            <div class="col l6 m6 t12 i12">
+            <div class="col l6 m6 t12 s12 i12">
                 <section class="color olive mz-skills-box zoomInRight animated">
-                    <i class="flex-icons-earphones"></i> TECNOLOGY:
+                    <mz-paragrafo>
+                        <i class="flex-icons-code"></i> TECNOLOGY:
+                    </mz-paragrafo>
                     <mz-lista>
+                        <li>
+                            BOOTSTRAP:
+                            <div class="mz-align-right">
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                            </div>
+                        </li>
                         <li>
                             GIT:
                             <div class="mz-align-right">
@@ -157,7 +172,45 @@
                                 <i class="flex-icons-star"></i>
                             </div>
                         </li>
+                        <li>
+                            WORDPRESS:
+                            <div class="mz-align-right">
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            MAGENTO:
+                            <div class="mz-align-right">
+                                <i class="flex-icons-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            FUEL PHP:
+                            <div class="mz-align-right">
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            LARAVEL:
+                            <div class="mz-align-right">
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                                <i class="flex-icons-star"></i>
+                            </div>
+                        </li>
                     </mz-lista>
+                </section>
+            </div>
+            <div class="col l12 m12 t12 s12 i12">
+                <section class="color white mz-description col l12 m12 s12 i12">
+                    <i class="flex-icons-quotation color grey"></i>
+                    Olá eu sou <b>Mizael</b>, muito prazer, este é o meu currículo, sou formado pelo SENAC como <b>Técnico em Informática para a Internet</b>,
+                    atuo a quase 2 anos na área de <b>Desenvolvedor Web</b>, e busco uma empresa em que possa crescer e aprender, fazendo a diferença
+                    que sei que vou fazer.
+                    <i class="flex-icons-right-1 color grey"></i>
                 </section>
             </div>
         </section>
@@ -165,7 +218,7 @@
             <article class="container mz-text-center">
                 <button class="btn mz-button" id="address">
                     <p class="mz-text-center">
-                        <strong>Rua:</strong> <span>Pernambuco Nº: 05,</span> <strong> Bairro: </strong> <span>Jardim Vermelhão - Guarulhos, SP</span>
+                        <span class="mz-touch-icon"><i class="flex-icons-finger-one-touch"></i></span><strong>Rua:</strong> <span>Pernambuco Nº: 05,</span> <strong> Bairro: </strong> <span>Jardim Vermelhão - Guarulhos, SP</span>
                     </p>
                 </button>
             </article>

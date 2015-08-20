@@ -3,15 +3,6 @@
  */
 
 $(document).ready(function(){
-    $("mz-link").easyAudioEffects(
-        {
-            ogg : "assets/sounds/pi.ogg",
-            mp3 : "assets/sounds/pi.mp3",
-            eventType : "hover", // or "click"
-            playType : "oneShotPolyphonic"
-        }
-    );
-
     $(".mz-profile-image").easyAudioEffects(
         {
             ogg: "assets/sounds/chime.ogg",
@@ -21,7 +12,43 @@ $(document).ready(function(){
         }
     );
 
-   navigator.geolocation.getCurrentPosition(local);
+    $("mz-link").easyAudioEffects(
+        {
+            ogg: "assets/sounds/chime.ogg",
+            mp3: "assets/sounds/chime.mp3",
+            eventType: "hover", // or "click"
+            playType: "oneShotPolyphonic"
+        }
+    );
+
+    $(".mail").easyAudioEffects(
+        {
+            ogg: "assets/sounds/chime.ogg",
+            mp3: "assets/sounds/chime.mp3",
+            eventType: "hover", // or "click"
+            playType: "oneShotPolyphonic"
+        }
+    );
+
+    $("button").easyAudioEffects(
+        {
+            ogg: "assets/sounds/chime.ogg",
+            mp3: "assets/sounds/chime.mp3",
+            eventType: "hover", // or "click"
+            playType: "oneShotPolyphonic"
+        }
+    );
+
+    $(".flex-icons-star").easyAudioEffects(
+        {
+            ogg: "assets/sounds/pi.ogg",
+            mp3: "assets/sounds/pi.mp3",
+            eventType: "hover", // or "click"
+            playType: "oneShotPolyphonic"
+        }
+    );
+
+   navigator.geolocation.getCurrentPosition(local,erro);
 
     function local(c) {
         var lat = c.coords.latitude;
@@ -170,7 +197,7 @@ $(document).ready(function(){
     var markInitial = new google.maps.Marker({
         position: {lat: lat, lng: lon},
         map: map,
-        icon: "/nemesis606.github.io/assets/img/circular28.png"
+        icon: "/assets/img/circular28.png"
     });
 
     $("#address").click(function(){
@@ -186,7 +213,7 @@ $(document).ready(function(){
 
         var contentBoxDestiny ='<div class="mz-box-map">'+
             '<figure class="mz-profile-image-map animated">'+
-            '<img src="/nemesis606.github.io/assets/img/bsIaPEiM.jpeg" alt=""/>'+
+            '<img src="/assets/img/bsIaPEiM.jpeg" alt=""/>'+
             '</figure>'+
             '</div>';
 
@@ -199,7 +226,7 @@ $(document).ready(function(){
 
                 new google.maps.Point( 0, 0 ),
 
-                new google.maps.Point( 10, 15)
+                new google.maps.Point( 14, 7)
             ),
             end: new google.maps.MarkerImage(
 
@@ -262,5 +289,18 @@ $(document).ready(function(){
     //        directionsDisplay.setDirections(result);
     //    }
     //});
+    }
+
+    function erro () {
+        var contentWarning = '<p class="mz-text-center">'+
+            '<i class="flex-icons-error-contorn"></i>'+
+            'Você precisa ceder sua localização para que o mapa lhe seja útil.'+
+            '</p>';
+
+        $("#alert_header").addClass("mz-social-media");
+        $("#alert_header").addClass("animated");
+        $("#alert_header").addClass("bounce");
+        $("body").css("overflow-x","hidden");
+        $("#alert_header").html(contentWarning);
     }
 });
