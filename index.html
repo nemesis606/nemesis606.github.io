@@ -1,237 +1,682 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Mizael Web Dev</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, use-scalable=no"/>
-        <script src="assets/components/webcomponentsjs/webcomponents-lite.min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery.easyaudioeffects.1.0.0.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkPvT-OuLSK4x-22w-PQX0xPL3QYbx2_E" type="text/javascript"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <link rel="stylesheet" href="css/flex-framework.css"/>
-        <link rel="stylesheet" href="css/nemes.es.css"/>
-        <link rel="stylesheet" href="css/animate.css"/>
-        <link rel="import" href="assets/modules/elements-dom.html"/>
-    </head>
-    <body id="body">
-        <header id="alert_header">
-        </header>
-        <mz-cabecalho class="header mz-header">
-            <section class="container">
-                <figure class="mz-profile-image animated">
-                    <img src="assets/img/bsIaPEiM.jpeg" alt=""/>
-                </figure>
-                <nav class="navbar valign-right">
-                    <mz-lista id="menu" class="bounce animated">
-                        <mz-link>
-                            <a href="https://github.com/nemesis606" target="_blank" class="mz-github">
-                                <i class="flex-icons-github"></i>
-                            </a>
-                        </mz-link>
-                        <mz-link>
-                            <a href="https://www.facebook.com/mizael.master" target="_blank" class="mz-facebook">
-                                <i class="flex-icons-facebook"></i>
-                            </a>
-                        </mz-link>
-                        <mz-link>
-                            <a target="_blank" href="https://plus.google.com/u/1/108846212994304804947/posts/p/pub" class="mz-google-plus">
-                                <i class="flex-icons-google-plus"></i>
-                            </a>
-                        </mz-link>
-                    </mz-lista>
-                </nav>
-            </section>
-        </mz-cabecalho>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, use-scalable=no"/>
+    <meta name="author" content="Mizael Web Dev <zxmaster01@gmail.com>"/>
+    <title>Mizael - The Web Dev</title>
+    <link rel="stylesheet" href="css/flex-framework.custom.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/flex.source.js"></script>
+    <style type="text/css">
+        *, *:before, *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        .box-clock {
+            position: absolute;
+            bottom: 10px;
+            left: 50px;
+            z-index: 25;
+        }
+        .box-clock.clock-right {
+            left: auto;
+            right: 50px;
+        }
 
-        <mz-titulo class="mz-content-map">
-            <div class="mz-float-dates-contact">
-                <section class="container">
-                    <mz-paragrafo class="mz-big-title">
-                        Mizael Web Dev
-                    </mz-paragrafo>
-                    <mz-paragrafo>
-                        <small>
-                            <span>
-                                <i class="flex-icons-phone-circle"></i>
-                                96501-6462 -
-                            </span>
-                            <a class="mail" href="mailto: zxmaster01@gmail.com">
-                                <i class="flex-icons-send-line"></i>
-                                zxmaster01@gmail.com
-                            </a>
-                        </small>
-                    </mz-paragrafo>
-                </section>
-            </div>
-        </mz-titulo>
+        .box-clock svg {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 62px;
+            height: 62px;
+        }
+        .clock-right svg {
+            right: auto;
+            left: -1px;
+        }
+        .box-clock circle {
+            fill: transparent;
+            stroke: #ecf0f1;
+            stroke-width: 5px;
+        }
 
-        <section class="container mz-padding-box">
-            <div class="col l6 m6 t12 s12 i12">
-                <section class="color green mz-skills-box zoomInLeft animated">
-                    <mz-paragrafo>
-                        <i class="flex-icons-radar"></i>
-                        <span>
-                            SKILLS
-                        </span>
-                    </mz-paragrafo>
-                    <mz-lista>
-                        <li>
-                            HTML5:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            CSS3:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            JQUERY:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            POLYMER:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            SASS:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            PHP OO:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            RUBY:
-                            <div class="mz-align-right">
-                               <i class="flex-icons-star-contorn"></i>
-                            </div>
-                        </li>
-                    </mz-lista>
-                </section>
-            </div>
-            <div class="col l6 m6 t12 s12 i12">
-                <section class="color olive mz-skills-box zoomInRight animated">
-                    <mz-paragrafo>
-                        <i class="flex-icons-code"></i> TECNOLOGY:
-                    </mz-paragrafo>
-                    <mz-lista>
-                        <li>
-                            BOOTSTRAP:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            GIT:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            NODE:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            WORDPRESS:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            MAGENTO:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            FUEL PHP:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            LARAVEL:
-                            <div class="mz-align-right">
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                                <i class="flex-icons-star"></i>
-                            </div>
-                        </li>
-                    </mz-lista>
-                </section>
-            </div>
-            <div class="col l12 m12 t12 s12 i12">
-                <section class="color white mz-description col l12 m12 s12 i12">
-                    <i class="flex-icons-quotation color grey"></i>
-                    Olá eu sou <b>Mizael</b>, muito prazer, este é o meu currículo, sou formado pelo SENAC como <b>Técnico em Informática para a Internet</b>,
-                    atuo a quase 2 anos na área de <b>Desenvolvedor Web</b>, e busco uma empresa em que possa crescer e aprender, fazendo a diferença
-                    que sei que vou fazer.
-                    <i class="flex-icons-right-1 color grey"></i>
-                </section>
-            </div>
-        </section>
-        <section>
-            <article class="container mz-text-center">
-                <button class="btn mz-button" id="address">
-                    <p class="mz-text-center">
-                        <span class="mz-touch-icon"><i class="flex-icons-finger-one-touch"></i></span><strong>Rua:</strong> <span>Pernambuco Nº: 05,</span> <strong> Bairro: </strong> <span>Jardim Vermelhão - Guarulhos, SP</span>
+        .clock {
+            position: relative;
+            float: right;
+            width: 60px;
+            height: 60px;
+            border:1px solid rgba(255,255,255,.5);
+            border-radius: 50%;
+        }
+        .clock:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            margin:-2px 0 0 -2px;
+            background: #fff;
+            border-radius: 4px;
+        }
+        .seconds, .minutes, .hours {
+            position: absolute;
+            width: 1px;
+            left: 29px;
+
+            -webkit-transform-origin: bottom center;
+            transform-origin: bottom center
+        }
+        .seconds {
+            top: 6px;
+            height: 22px;
+            background-color: rgba(255,255,255,.5);
+        }
+        .minutes {
+            top: 6px;
+            height: 22px;
+            background-color: #fff;
+        }
+        .hours {
+            top: 14px;
+            height: 14px;
+            background-color: #fff;
+        }
+        .initialised .seconds{
+            -webkit-animation: Tickseconds 60s steps(60,end) infinite;
+        }
+        .initialised .minutes{
+            -webkit-animation: Tickminutes 3600s linear infinite;
+        }
+        .initialised .hours{
+            -webkit-animation: Tickhours 43200s linear infinite;
+        }
+
+        .box-clock .datas {
+            float: left;
+            height: 60px;
+            padding-right: 10px;
+            font-family: 'MuseoSans_Thin';
+            color: #fff;
+        }
+        .box-clock .datas span {
+            position: relative;
+            display: block;
+        }
+        .box-clock .datas .temperature {
+            font-size: 38px;
+        }
+        .box-clock .datas .temperature i {
+            position: relative;
+            top: -12px;
+            left: 2px;
+            font-style: normal;
+            font-size: 21px;
+        }
+        .box-clock .datas .location {
+            font-size: 14px;
+        }
+
+        .box-clock.clock-right .clock {
+            float: left;
+        }
+        .box-clock.clock-right .datas {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+        .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: #ffffff;
+            position: fixed;
+        }
+
+        .fx-text-title-custom{
+            line-height: 28px;
+            word-spacing: -1px;
+        }
+
+        .fx-custom-contextmenu,.fx-custom-contextmenu li{
+            width: 206px;
+            list-style: none;
+        }
+
+        .fx-custom-contextmenu a {
+            text-decoration: none;
+        }
+
+        #mouse-fixed-icon{
+            height: 54px;
+            z-index: 99999999999999;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            bottom: 30px;
+        }
+
+        #mouse-fixed-icon #Capa_1{
+            height: 54px;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        path.azul{
+            fill: #EEEEEE;
+            display: inline-block;
+        }
+
+        .svg-width{
+            display: inline-block;
+            width: 90px;
+            height: 80px;
+            margin:20px 0;
+            cursor: help;
+        }
+
+        .box-info{
+            visibility: hidden;
+            height: 100px;
+            position: absolute;
+            width: 55%;
+            padding: 5%;
+            top: -100px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 0;
+            opacity: 0;
+            font-family: 'Kontanter',sans-serif;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 60px;
+            color: #AAAAAA;
+            -webkit-transition: opacity 1s linear;
+            transition: opacity 1s linear;
+        }
+
+        .box-info:after{
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            border-top:solid 15px #FFFFFF;
+            border-left:solid 15px transparent;
+            border-right:solid 15px transparent;
+            content: "";
+            display: block;
+        }
+
+        .offset-modal:hover > .box-info{
+            visibility: visible;
+            z-index: 9999999999999999999999999999;
+            opacity: 1;
+            -webkit-transition: opacity 0.45s linear;
+            transition: opacity 0.45s linear;
+        }
+
+    </style>
+</head>
+<body class="color grey">
+    <header class="container-fluid fx-fixed fx-top fx-left fx-right col l12 m12">
+        <div class="col l6 m6 t6">
+            <h1 class="fx-brand text color white"><b>Mizael Web Dev</b></h1>
+        </div>
+        <nav class="fx-text-right col l6 m6 t6">
+            <ul class="navbar nav nav-links">
+                <li><a href=""><i class="fx-icons-facebook"></i></a></li>
+                <li><a href=""><i class="fx-icons-github"></i></a></li>
+                <li><a href=""><i class="fx-icons-google-plus"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container-fluid" fx-page fx-number="1">
+        <img class="fx-fixed fx-neutral fx-top fx-left fx-banner-parallax" src="image/108.jpg"/>
+        <div class="fx-window">
+            <article class="col l12 m12">
+                <blockquote class="fx-text-fadein col l6 col offset-l3">
+                    <p class="color text white fx-text-justify fx-text-m fx-text-title fx-text-title-custom">
+                        Olá, <span class="color text yellow fx-text-title">Muito prazer! <i class="fx-icons-liked"></i></span> este é o meu portfólio,
+                        obrigádo por visita-lo, meu nome é <span class="fx-text-title color text yellow">Mizael</span> e sou um desenvolvedor web e adoro
+                        fazer oque faço sou formado pelo <span class="fx-text-title color text yellow">SENAC</span> e fui capacitado em diversas linguagens
+                        para desenvolver os mais variados projetos para a web!
                     </p>
-                </button>
+                </blockquote>
             </article>
-        </section>
-       <footer>
-           <address id="map" class="mz-map-address">
-
-           </address>
-           <div class="mz-button-fixed-box">
-               <button id="up" class="btn">
-                   <i class="flex-icons-up-two"></i>
-               </button>
-           </div>
-       </footer>
-    </body>
+        </div>
+    </section>
+    <section class="container-fluid" fx-page fx-number="2">
+        <img class="fx-fixed fx-neutral fx-top fx-left fx-banner-parallax" src="image/54.jpg"/>
+        <div class="fx-window">
+            <section class="col l12 m12 fx-effect-scale">
+                <div class="col l12 m12">
+                    <h2 class="col offset-l1 l10 m12 t12 fx-text-title-custom color text yellow fx-text-center fx-text-xx">
+                        Skills
+                        <i class="fx-icons-linegraphic"></i>
+                    </h2>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg version="1.0" class="svg-width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                                <g>
+                                    <polygon fill="#E44D26" points="27.377,28.889 16.001,32 4.625,28.889 2,0 30.002,0 	"/>
+                                    <polygon fill="#FF6C39" points="16,2 16,29.75 25.232,27.008 27.688,2 	"/>
+                                    <polygon fill="#FFFFFF" points="24.363,6 7.607,6 8,10 8.619,17 19.503,17 19.148,20.984 16,21.99 12.857,20.984 12.648,19
+                                        8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.718,13 12.252,13 12.002,10 24,10 	"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            HTML5
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg version="1.0" class="svg-width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                                    <g>
+                                        <polygon fill="#1F62AE" points="27.377,28.889 16.001,32 4.625,28.889 2,0 30.002,0 	"/>
+                                        <polygon fill="#347DC6" points="16,2 16,29.75 25.232,27.008 27.688,2 	"/>
+                                        <polygon fill="#FFFFFF" points="24.363,6 7.607,6 8,10 16,10 8.25,12.99 8.619,17 19.502,17 19.158,21 16,21.99 12.861,20.984
+                                            12.533,19 8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.719,12.99 16.026,12.99 24,10 	"/>
+                                    </g>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            CSS3
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg class="svg-width" xmlns="http://www.w3.org/2000/svg" width="298" height="420" viewBox="0 77 298 345">
+                                <style type="text/css">
+                                    <![CDATA[
+                                        .st0{fill:#EBEBEB;}
+                                        .st1{fill:#8ACF17;}
+                                        .st2{fill:#FFFFFF;}
+                                        .st3{fill:#63A814;}
+                                    ]]>
+                                </style>
+                                <path class="st3" d="M27 386L0 82h298l-27 304-122 34z"/>
+                                <path class="st1" d="M149 393.84l98.48-27.3L270.68 107H149z"/>
+                                <path id="J_1_" class="st2" d="M55.476 145l3.33 37h142.38L190.5 305.86l-41.64 11.228-41.548-11.203L104.655 276h-37.45l5.227 58.664 76.392 21.26 76.55-21.26L242.348 145z"/>
+                                <path class="st0" d="M148.86 317.088l-41.548-11.203L104.655 276h-37.45l5.227 58.664L149 355.924zM58.805 182H149v-37H55.476z"/>
+                                <!--<path d="M122.07 0v36h-31v20h52V0zM153.07 0v20.847L175.972 38H153.07v18h53V37.876L180.407 18h25.663V0z"/>-->
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            Jquery
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg version="1.1" class="svg-width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                                <path fill="#777BB4" d="M6.028,8.587H1.819L0,17.801h2.161l0.456-2.388h2.047c1.933,0.114,4.094-1.479,4.094-4.208
+                                    C8.758,9.612,7.849,8.701,6.028,8.587L6.028,8.587z M4.436,13.708H3.071l0.569-3.413h1.478c0.796,0,1.366,0.342,1.366,1.023
+                                    C6.369,13.252,5.46,13.593,4.436,13.708z M13.648,8.587h-2.047l0.455-2.388H9.895l-1.819,9.213h2.161l1.023-5.118h1.707
+                                    c0.796,0,0.796,0.342,0.682,0.911l-0.796,4.208h2.275l0.795-4.664C16.15,9.613,15.467,8.703,13.648,8.587L13.648,8.587z
+                                     M21.269,8.587h-4.208l-1.819,9.213h2.16l0.455-2.388h2.048C21.839,15.526,24,13.933,24,11.205C24,9.612,23.089,8.701,21.269,8.587
+                                    L21.269,8.587z M19.676,13.708h-1.364l0.568-3.413h1.479c0.797,0,1.366,0.342,1.366,1.023C21.611,13.252,20.7,13.593,19.676,13.708z
+	                            "/>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            PHP
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg class="svg-width" xmlns="http://www.w3.org/2000/svg" width="512" height="384" viewBox="0 0 512 384"><path fill="#CF649A" d="M440.6 220.6c-17.9.1-33.4 4.4-46.4 10.8-4.8-9.5-9.6-17.8-10.4-24-.9-7.2-2-11.6-.9-20.2s6.1-20.8 6.1-21.8c-.1-.9-1.1-5.3-11.4-5.4-10.3-.1-19.2 2-20.2 4.7s-3 8.9-4.3 15.3c-1.8 9.4-20.6 42.7-31.3 60.2-3.5-6.8-6.5-12.8-7.1-17.6-.9-7.2-2-11.6-.9-20.2s6.1-20.8 6.1-21.8c-.1-.9-1.1-5.3-11.4-5.4-10.3-.1-19.2 2-20.2 4.7s-2.1 9.1-4.3 15.3c-2.1 6.2-27.1 61.8-33.6 76.3-3.3 7.4-6.2 13.3-8.3 17.3s-.1.3-.3.7c-1.8 3.4-2.8 5.3-2.8 5.3v.1c-1.4 2.5-2.9 4.9-3.6 4.9-.5 0-1.5-6.7.2-15.9 3.7-19.3 12.7-49.4 12.6-50.5 0-.5 1.7-5.8-5.8-8.5-7.3-2.7-9.9 1.8-10.5 1.8-.6 0-1.1 1.6-1.1 1.6s8.1-33.9-15.5-33.9c-14.8 0-35.2 16.1-45.3 30.8-6.4 3.5-20 10.9-34.4 18.8-5.5 3-11.2 6.2-16.6 9.1l-1.1-1.2c-28.6-30.5-81.5-52.1-79.3-93.1.8-14.9 6-54.2 101.6-101.8 78.3-39 141-28.3 151.9-4.5 15.5 34-33.5 97.2-114.9 106.3-31 3.5-47.3-8.5-51.4-13-4.3-4.7-4.9-4.9-6.5-4-2.6 1.4-1 5.6 0 8.1 2.4 6.3 12.4 17.5 29.4 23.1 14.9 4.9 51.3 7.6 95.3-9.4 49.3-19.1 87.8-72.1 76.5-116.4-11.5-45.1-86.3-59.9-157-34.8-42.1 15-87.7 38.4-120.5 69.1-39 36.4-45.2 68.2-42.6 81.4 9.1 47.1 74 77.8 100 100.5-1.3.7-2.5 1.4-3.6 2-13 6.4-62.5 32.3-74.9 59.7-14 31 2.2 53.3 13 56.3 33.4 9.3 67.6-7.4 86.1-34.9 18.4-27.5 16.2-63.2 7.7-79.5l-.3-.6 10.2-6c6.6-3.9 13.1-7.5 18.8-10.6-3.2 8.7-5.5 19-6.7 34-1.4 17.6 5.8 40.4 15.3 49.4 4.2 3.9 9.2 4 12.3 4 11 0 16-9.1 21.5-20 6.8-13.3 12.8-28.7 12.8-28.7s-7.5 41.7 13 41.7c7.5 0 15-9.7 18.4-14.7v.1s.2-.3.6-1c.8-1.2 1.2-1.9 1.2-1.9v-.2c3-5.2 9.7-17.1 19.7-36.8 12.9-25.4 25.3-57.2 25.3-57.2s1.2 7.8 4.9 20.6c2.2 7.6 7 15.9 10.7 24-3 4.2-4.8 6.6-4.8 6.6l.1.1c-2.4 3.2-5.1 6.6-7.9 10-10.2 12.2-22.4 26.1-24 30.1-1.9 4.7-1.5 8.2 2.2 11 2.7 2 7.5 2.4 12.6 2 9.2-.6 15.6-2.9 18.8-4.3 5-1.8 10.7-4.5 16.2-8.5 10-7.4 16.1-17.9 15.5-31.9-.3-7.7-2.8-15.3-5.9-22.5.9-1.3 1.8-2.6 2.7-4 15.8-23.1 28-48.5 28-48.5s1.2 7.8 4.9 20.6c1.9 6.5 5.7 13.6 9.1 20.6-14.8 12.1-24.1 26.1-27.3 35.3-5.9 17-1.3 24.7 7.4 26.5 3.9.8 9.5-1 13.7-2.8 5.2-1.7 11.5-4.6 17.3-8.9 10-7.4 19.6-17.7 19.1-31.6-.3-6.4-2-12.7-4.3-18.7 12.6-5.2 28.9-8.2 49.6-5.7 44.5 5.2 53.3 33 51.6 44.6-1.7 11.6-11 18-14.1 20-3.1 1.9-4.1 2.6-3.8 4 .4 2.1 1.8 2 4.5 1.6 3.7-.6 23.4-9.5 24.2-30.9 1.2-27.5-24.9-57.5-71.2-57.2zm-343.2 115.7c-14.7 16.1-35.4 22.2-44.2 17-9.5-5.5-5.8-29.2 12.3-46.3 11-10.4 25.3-20 34.7-25.9 2.1-1.3 5.3-3.2 9.1-5.5.6-.4 1-.6 1-.6.7-.4 1.5-.9 2.3-1.4 6.7 24.4.3 45.8-15.2 62.7zm107.5-73.1c-5.1 12.5-15.9 44.6-22.4 42.8-5.6-1.5-9-25.8-1.1-49.8 4-12.1 12.5-26.5 17.5-32.1 8.1-9 16.9-12 19.1-8.3 2.6 4.8-9.9 39.6-13.1 47.4zm88.7 42.4c-2.2 1.1-4.2 1.9-5.1 1.3-.7-.4.9-1.9.9-1.9s11.1-11.9 15.5-17.4c2.5-3.2 5.5-6.9 8.7-11.1v1.2c0 14.4-13.8 24-20 27.9zm68.4-15.6c-1.6-1.2-1.4-4.9 4-16.5 2.1-4.6 6.9-12.3 15.2-19.6 1 3 1.6 5.9 1.5 8.6-.1 18-12.9 24.7-20.7 27.5z"/></svg>
+                        </div>
+                        <div class="box-info color white">
+                            SASS
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg class="svg-width" xmlns="http://www.w3.org/2000/svg" viewBox="-0.2 -1 379 334">
+                                <path id="puddle" fill="#9CDAF1" d="m296.94 295.43c0 20.533-47.56 37.176-106.22 37.176-58.67 0-106.23-16.643-106.23-37.176s47.558-37.18 106.23-37.18c58.66 0 106.22 16.65 106.22 37.18z"/>
+                                <g id="shadow-legs" fill="#7DBBE6">
+                                    <path d="m161.85 331.22v-26.5c0-3.422-.619-6.284-1.653-8.701 6.853 5.322 7.316 18.695 7.316 18.695v17.004c6.166.481 12.534.773 19.053.861l-.172-16.92c-.944-23.13-20.769-25.961-20.769-25.961-7.245-1.645-7.137 1.991-6.409 4.34-7.108-12.122-26.158-10.556-26.158-10.556-6.611 2.357-.475 6.607-.475 6.607 10.387 3.775 11.33 15.105 11.33 15.105v23.622c5.72.98 11.71 1.79 17.94 2.4z"/>
+                                    <path d="m245.4 283.48s-19.053-1.566-26.16 10.559c.728-2.35.839-5.989-6.408-4.343 0 0-19.824 2.832-20.768 25.961l-.174 16.946c6.509-.025 12.876-.254 19.054-.671v-17.219s.465-13.373 7.316-18.695c-1.034 2.417-1.653 5.278-1.653 8.701v26.775c6.214-.544 12.211-1.279 17.937-2.188v-24.113s.944-11.33 11.33-15.105c0-.01 6.13-4.26-.48-6.62z"/>
+                                </g>
+                                <path id="cat" d="m378.18 141.32l.28-1.389c-31.162-6.231-63.141-6.294-82.487-5.49 3.178-11.451 4.134-24.627 4.134-39.32 0-21.073-7.917-37.931-20.77-50.759 2.246-7.25 5.246-23.351-2.996-43.963 0 0-14.541-4.617-47.431 17.396-12.884-3.22-26.596-4.81-40.328-4.81-15.109 0-30.376 1.924-44.615 5.83-33.94-23.154-48.923-18.411-48.923-18.411-9.78 24.457-3.733 42.566-1.896 47.063-11.495 12.406-18.513 28.243-18.513 47.659 0 14.658 1.669 27.808 5.745 39.237-19.511-.71-50.323-.437-80.373 5.572l.276 1.389c30.231-6.046 61.237-6.256 80.629-5.522.898 2.366 1.899 4.661 3.021 6.879-19.177.618-51.922 3.062-83.303 11.915l.387 1.36c31.629-8.918 64.658-11.301 83.649-11.882 11.458 21.358 34.048 35.152 74.236 39.484-5.704 3.833-11.523 10.349-13.881 21.374-7.773 3.718-32.379 12.793-47.142-12.599 0 0-8.264-15.109-24.082-16.292 0 0-15.344-.235-1.059 9.562 0 0 10.267 4.838 17.351 23.019 0 0 9.241 31.01 53.835 21.061v32.032s-.943 11.33-11.33 15.105c0 0-6.137 4.249.475 6.606 0 0 28.792 2.361 28.792-21.238v-34.929s-1.142-13.852 5.663-18.667v57.371s-.47 13.688-7.551 18.881c0 0-4.723 8.494 5.663 6.137 0 0 19.824-2.832 20.769-25.961l.449-58.06h4.765l.453 58.06c.943 23.129 20.768 25.961 20.768 25.961 10.383 2.357 5.663-6.137 5.663-6.137-7.08-5.193-7.551-18.881-7.551-18.881v-56.876c6.801 5.296 5.663 18.171 5.663 18.171v34.929c0 23.6 28.793 21.238 28.793 21.238 6.606-2.357.474-6.606.474-6.606-10.386-3.775-11.33-15.105-11.33-15.105v-45.786c0-17.854-7.518-27.309-14.87-32.3 42.859-4.25 63.426-18.089 72.903-39.591 18.773.516 52.557 2.803 84.873 11.919l.384-1.36c-32.131-9.063-65.692-11.408-84.655-11.96.898-2.172 1.682-4.431 2.378-6.755 19.25-.80 51.38-.79 82.66 5.46z"/>
+                                <path id="face" fill="#F4CBB2" d="m258.19 94.132c9.231 8.363 14.631 18.462 14.631 29.343 0 50.804-37.872 52.181-84.585 52.181-46.721 0-84.589-7.035-84.589-52.181 0-10.809 5.324-20.845 14.441-29.174 15.208-13.881 40.946-6.531 70.147-6.531 29.07-.004 54.72-7.429 69.95 6.357z"/>
+                                <path id="eyes" fill="#FFF" d="m160.1 126.06 c0 13.994-7.88 25.336-17.6 25.336-9.72 0-17.6-11.342-17.6-25.336 0-13.992 7.88-25.33 17.6-25.33 9.72.01 17.6 11.34 17.6 25.33z m94.43 0 c0 13.994-7.88 25.336-17.6 25.336-9.72 0-17.6-11.342-17.6-25.336 0-13.992 7.88-25.33 17.6-25.33 9.72.01 17.6 11.34 17.6 25.33z"/>
+                                <g fill="#AD5C51">
+                                    <path id="pupils" d="m154.46 126.38 c0 9.328-5.26 16.887-11.734 16.887s-11.733-7.559-11.733-16.887c0-9.331 5.255-16.894 11.733-16.894 6.47 0 11.73 7.56 11.73 16.89z m94.42 0 c0 9.328-5.26 16.887-11.734 16.887s-11.733-7.559-11.733-16.887c0-9.331 5.255-16.894 11.733-16.894 6.47 0 11.73 7.56 11.73 16.89z"/>
+                                    <circle id="nose" cx="188.5" cy="148.56" r="4.401"/>
+                                    <path id="mouth" d="m178.23 159.69c-.26-.738.128-1.545.861-1.805.737-.26 1.546.128 1.805.861 1.134 3.198 4.167 5.346 7.551 5.346s6.417-2.147 7.551-5.346c.26-.738 1.067-1.121 1.805-.861s1.121 1.067.862 1.805c-1.529 4.324-5.639 7.229-10.218 7.229s-8.68-2.89-10.21-7.22z"/>
+                                </g>
+                                <path id="octo" fill="#C3E4D8" d="m80.641 179.82 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m8.5 4.72 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m5.193 6.14 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m4.72 7.08 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m5.188 6.61 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m7.09 5.66 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m9.91 3.78 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m9.87 0 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z m10.01 -1.64 c0 1.174-1.376 2.122-3.07 2.122-1.693 0-3.07-.948-3.07-2.122 0-1.175 1.377-2.127 3.07-2.127 1.694 0 3.07.95 3.07 2.13z"/>
+                                <path id="drop" fill="#9CDAF1" d="m69.369 186.12l-3.066 10.683s-.8 3.861 2.84 4.546c3.8-.074 3.486-3.627 3.223-4.781z"/>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            GIT (GITHUB)
+                        </div>
+                    </figure>
+                    <figure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg class="svg-width" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="416px" height="286px" viewBox="0 0 416 286" enable-background="new 0 0 416 286" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <polygon fill="#303F9F" points="84.157,143 42.878,214.5 84.157,286 125.436,214.5 		"/>
+                                        <polygon fill="#3F51B5" points="331.842,0 290.561,71.5 331.842,143 373.121,71.5 		"/>
+                                        <polygon fill="#7986CB" points="373.121,71.5 249.278,286 331.842,286 414.4,143 		"/>
+                                        <polygon fill="#FF4081" points="249.278,0 84.157,286 166.721,286 331.842,0 		"/>
+                                        <polygon fill="#536DFE" points="84.157,0 1.596,143 42.878,214.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="249.278,0 290.561,71.5 331.842,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="208,71.5 249.278,0 290.561,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="208,71.5 249.278,143 290.561,71.5 		"/>
+                                        <polygon fill-opacity="0.1" points="166.721,143 208,71.5 249.278,143 		"/>
+                                        <polygon fill-opacity="0.2" points="166.721,143 208,214.5 249.278,143 		"/>
+                                        <polygon fill-opacity="0.3" points="125.438,214.5 166.721,143 208,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="125.438,214.5 166.721,286 208,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="84.157,286 125.438,214.5 166.721,286 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="84.157,0 125.438,71.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="42.878,71.5 84.157,0 125.438,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="42.878,71.5 84.157,143 125.438,71.5 		"/>
+                                        <polygon fill-opacity="0.1" points="1.598,143 42.878,71.5 84.157,143 		"/>
+                                        <polygon fill-opacity="0.2" points="1.598,143 42.878,214.5 84.157,143 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="125.438,214.5 84.157,143 42.878,214.5 		"/>
+                                        <polygon fill-opacity="0.2" points="125.438,214.5 84.157,286 42.878,214.5 		"/>
+                                        <polygon fill-opacity="0.2" points="373.121,71.5 331.842,0 290.561,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="373.121,71.5 331.842,143 290.561,71.5 		"/>
+                                        <g>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.2" points="331.842,143 373.121,71.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.1" points="331.842,143 373.121,214.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0" points="290.561,214.5 331.842,143 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.1" points="290.561,214.5 331.842,286 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.2" points="249.278,286 290.561,214.5 331.842,286 			"/>
+                                        </g>
+                                    </g>
+                                    <rect y="-65" fill="none" width="416" height="416"/>
+                                </g>
+                                <g display="none">
+                                    <g display="inline">
+                                        <polygon fill="#303F9F" points="84.157,143 42.878,214.5 84.157,286 166.721,286 		"/>
+                                        <polygon fill="#3F51B5" points="331.842,0 249.278,0 331.842,143 373.121,71.5 		"/>
+                                        <polygon fill="#7986CB" points="373.121,71.5 249.278,286 331.842,286 414.4,143 		"/>
+                                        <polygon fill="#536DFE" points="84.157,0 1.596,143 42.878,214.5 166.721,0 		"/>
+                                        <polygon fill-opacity="0.5" points="249.278,0 290.561,71.5 331.842,0 		"/>
+                                        <polygon fill-opacity="0.5" points="84.157,286 125.438,214.5 166.721,286 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="84.157,0 125.438,71.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="42.878,71.5 84.157,0 125.438,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="42.878,71.5 84.157,143 125.438,71.5 		"/>
+                                        <polygon fill-opacity="0.1" points="1.598,143 42.878,71.5 84.157,143 		"/>
+                                        <polygon fill-opacity="0.2" points="1.598,143 42.878,214.5 84.157,143 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="125.438,214.5 84.157,143 42.878,214.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="373.121,71.5 331.842,143 290.561,71.5 		"/>
+                                        <g>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.2" points="331.842,143 373.121,71.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.1" points="331.842,143 373.121,214.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0" points="290.561,214.5 331.842,143 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.1" points="290.561,214.5 331.842,286 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.2" points="249.278,286 290.561,214.5 331.842,286 			"/>
+                                        </g>
+                                        <polygon fill-opacity="0.2" points="125.438,214.5 84.157,286 42.878,214.5 		"/>
+                                        <polygon fill-opacity="0.2" points="373.121,71.5 331.842,0 290.561,71.5 		"/>
+                                    </g>
+                                    <rect y="-65" display="inline" fill="none" width="416" height="416"/>
+                                </g>
+                                <g display="none">
+                                    <g display="inline">
+                                        <polygon fill="#FF4081" points="249.279,0 84.157,286 166.721,286 331.843,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="249.279,0 290.558,71.5 331.843,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="208,71.5 249.279,0 290.558,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="208,71.5 249.279,143 290.558,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="166.721,143 208,214.5 249.279,143 		"/>
+                                        <polygon fill-opacity="0.3" points="125.439,214.5 166.721,143 208,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="125.439,214.5 166.721,286 208,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="84.157,286 125.439,214.5 166.721,286 		"/>
+                                        <polygon fill-opacity="0.1" points="166.721,143 208,71.5 249.279,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#FF4081" points="331.84,0 166.718,286 249.279,286 373.121,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="290.558,71.5 331.84,0 373.121,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="290.558,71.5 331.84,143 373.121,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="249.279,143 290.558,214.5 331.84,143 		"/>
+                                        <polygon fill-opacity="0.3" points="208,214.5 249.279,143 290.558,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="208,214.5 249.279,286 290.558,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="166.718,286 208,214.5 249.279,286 		"/>
+                                        <polygon fill-opacity="0.1" points="249.279,143 290.558,71.5 331.84,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#FF4081" points="166.718,0 42.878,214.5 84.16,286 249.279,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="166.718,0 208,71.5 249.279,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="125.439,71.5 166.718,0 208,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="125.439,71.5 166.718,143 208,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="84.16,143 125.439,214.5 166.718,143 		"/>
+                                        <polygon fill-opacity="0.3" points="42.878,214.5 84.16,143 125.439,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="42.878,214.5 84.16,286 125.439,214.5 		"/>
+                                        <polygon fill-opacity="0.1" points="84.16,143 125.439,71.5 166.718,143 		"/>
+                                    </g>
+                                    <rect y="-65" display="inline" fill="none" width="416" height="416"/>
+                                    <g display="inline">
+                                        <polygon fill="#303F9F" points="84.157,143 42.878,214.5 84.157,286 166.721,286 		"/>
+                                        <polygon fill="#3F51B5" points="331.843,0 249.279,0 331.843,143 373.121,71.5 		"/>
+                                        <polygon fill="#7986CB" points="373.121,71.5 249.279,286 331.843,286 414.4,143 		"/>
+                                        <polygon fill="#536DFE" points="84.157,0 1.597,143 42.878,214.5 166.721,0 		"/>
+                                        <polygon fill-opacity="0.5" points="249.279,0 290.558,71.5 331.843,0 		"/>
+                                        <polygon fill-opacity="0.5" points="84.157,286 125.439,214.5 166.721,286 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="84.157,0 125.439,71.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="42.878,71.5 84.157,0 125.439,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="42.878,71.5 84.157,143 125.439,71.5 		"/>
+                                        <polygon fill-opacity="0.1" points="1.6,143 42.878,71.5 84.157,143 		"/>
+                                        <polygon fill-opacity="0.2" points="1.6,143 42.878,214.5 84.157,143 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="125.439,214.5 84.157,143 42.878,214.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="373.121,71.5 331.843,143 290.558,71.5 		"/>
+                                        <g>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.2" points="331.843,143 373.121,71.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0.1" points="331.843,143 373.121,214.5 414.4,143 			"/>
+                                            <polygon fill="#FFFFFF" fill-opacity="0" points="290.558,214.5 331.843,143 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.1" points="290.558,214.5 331.843,286 373.121,214.5 			"/>
+                                            <polygon fill-opacity="0.2" points="249.279,286 290.558,214.5 331.843,286 			"/>
+                                        </g>
+                                        <polygon fill-opacity="0.2" points="125.439,214.5 84.157,286 42.878,214.5 		"/>
+                                        <polygon fill-opacity="0.2" points="373.121,71.5 331.843,0 290.558,71.5 		"/>
+                                    </g>
+                                </g>
+                                <g display="none">
+                                    <g display="inline">
+                                        <polygon fill="#9F499B" points="249.279,0 84.157,286 166.721,286 331.843,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="249.279,0 290.558,71.5 331.843,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="208,71.5 249.279,0 290.558,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="208,71.5 249.279,143 290.558,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="166.721,143 208,214.5 249.279,143 		"/>
+                                        <polygon fill-opacity="0.3" points="125.439,214.5 166.721,143 208,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="125.439,214.5 166.721,286 208,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="84.157,286 125.439,214.5 166.721,286 		"/>
+                                        <polygon fill-opacity="0.1" points="166.721,143 208,71.5 249.279,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#9F499B" points="331.84,0 166.718,286 249.279,286 373.121,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="290.558,71.5 331.84,0 373.121,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="290.558,71.5 331.84,143 373.121,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="249.279,143 290.558,214.5 331.84,143 		"/>
+                                        <polygon fill-opacity="0.3" points="208,214.5 249.279,143 290.558,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="208,214.5 249.279,286 290.558,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="166.718,286 208,214.5 249.279,286 		"/>
+                                        <polygon fill-opacity="0.1" points="249.279,143 290.558,71.5 331.84,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#9F499B" points="373.121,71.5 249.279,286 331.843,286 414.4,143 		"/>
+                                        <polygon fill-opacity="0.2" points="331.843,143 373.121,214.5 414.4,143 		"/>
+                                        <polygon fill-opacity="0.3" points="290.558,214.5 331.843,143 373.121,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="290.558,214.5 331.843,286 373.121,214.5 		"/>
+                                        <polygon fill-opacity="0.5" points="249.279,286 290.558,214.5 331.843,286 		"/>
+                                        <polygon fill-opacity="0.1" points="331.843,143 373.121,71.5 414.4,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#9F499B" points="166.718,0 42.878,214.5 84.16,286 249.279,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="166.718,0 208,71.5 249.279,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="125.439,71.5 166.718,0 208,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="125.439,71.5 166.718,143 208,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="84.16,143 125.439,214.5 166.718,143 		"/>
+                                        <polygon fill-opacity="0.3" points="42.878,214.5 84.16,143 125.439,214.5 		"/>
+                                        <polygon fill-opacity="0.4" points="42.878,214.5 84.16,286 125.439,214.5 		"/>
+                                        <polygon fill-opacity="0.1" points="84.16,143 125.439,71.5 166.718,143 		"/>
+                                    </g>
+                                    <g display="inline">
+                                        <polygon fill="#9F499B" points="84.157,0 1.6,143 42.878,214.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.2" points="84.157,0 125.439,71.5 166.721,0 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0.1" points="42.878,71.5 84.157,0 125.439,71.5 		"/>
+                                        <polygon fill="#FFFFFF" fill-opacity="0" points="42.878,71.5 84.157,143 125.439,71.5 		"/>
+                                        <polygon fill-opacity="0.2" points="1.6,143 42.878,214.5 84.157,143 		"/>
+                                        <polygon fill-opacity="0.1" points="1.6,143 42.878,71.5 84.157,143 		"/>
+                                    </g>
+                                    <rect y="-65" display="inline" fill="none" width="416" height="416"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            Polimery
+                        </div>
+                    </figure>
+                    <fugure class="col l4 m4 t4 offset-modal">
+                        <div class="fx-text-center">
+                            <svg
+                               class="svg-width"
+                               xmlns:dc="http://purl.org/dc/elements/1.1/"
+                               xmlns:cc="http://creativecommons.org/ns#"
+                               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                               xmlns:svg="http://www.w3.org/2000/svg"
+                               xmlns="http://www.w3.org/2000/svg"
+                               xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                               xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                               version="1.0"
+                               width="300"
+                               height="300"
+                               viewBox="0 0 297.59815 567.18777"
+                               id="svg2"
+                               xml:space="preserve"
+                               inkscape:version="0.48.4 r9939"
+                               sodipodi:docname="Logo_MySQL.svg"><metadata
+                               id="metadata16"><rdf:RDF><cc:Work
+                                   rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+                                     rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+                               pagecolor="#ffffff"
+                               bordercolor="#666666"
+                               borderopacity="1"
+                               objecttolerance="10"
+                               gridtolerance="10"
+                               guidetolerance="10"
+                               inkscape:pageopacity="0"
+                               inkscape:pageshadow="2"
+                               inkscape:window-width="1920"
+                               inkscape:window-height="1017"
+                               id="namedview14"
+                               showgrid="false"
+                               fit-margin-top="0"
+                               fit-margin-left="0"
+                               fit-margin-right="0"
+                               fit-margin-bottom="0"
+                               inkscape:zoom="0.60235022"
+                               inkscape:cx="317.73483"
+                               inkscape:cy="242.88028"
+                               inkscape:window-x="-8"
+                               inkscape:window-y="-8"
+                               inkscape:window-maximized="1"
+                               inkscape:current-layer="svg2" />
+                             <defs
+                               id="defs4"><style
+                                 type="text/css"
+                                 id="style6" /></defs>
+                             <g
+                               id="g3001"
+                               transform="translate(230.46016,6.4962049)"><path
+                                 d="m 156.08311,428.63114 c -30.7184,-0.766 -54.5256,2.30776 -74.493203,10.75339 -5.7597,2.30291 -14.9762,2.30532 -15.7446,9.59947 3.0738,3.0738 3.4568,8.06506 6.1451,12.28786 4.6107,7.67715 12.6709,18.04753 19.9675,23.42422 8.062603,6.1427 16.127603,12.2854 24.573303,17.66209 14.9762,9.2165 31.8722,14.59072 46.463,23.80718 8.4505,5.37179 16.8936,12.28784 25.3417,18.04753 4.2253,3.06891 6.9112,8.06258 12.2879,9.98248 0,-0.38544 0,-0.76845 0,-1.15144 -2.6884,-3.45677 -3.4568,-8.44803 -6.1427,-12.28784 -3.8374,-3.8398 -7.6796,-7.29658 -11.5194,-11.13638 -11.1364,-14.97378 -24.9588,-28.02995 -39.9348,-38.78092 -12.2854,-8.44807 -39.1664,-19.96745 -44.157803,-34.17521 0,0 -0.3854,-0.38301 -0.7684,-0.76602 8.448003,-0.76845 18.430503,-3.83977 26.495603,-6.14514 13.0563,-3.45676 24.9588,-2.68833 38.3979,-6.1427 6.1427,-1.53687 12.2879,-3.45677 18.4306,-5.37668 0,-1.15388 0,-2.30289 0,-3.45433 -6.9087,-6.91362 -11.9024,-16.12764 -19.199,-22.65583 -19.582,-16.8985 -41.0864,-33.40675 -63.356703,-47.22911 -11.9049,-7.67959 -27.2641,-12.67331 -39.9348,-19.19902 -4.6058,-2.30776 -12.2879,-3.45676 -14.9738,-7.2966 -6.91357,-8.44802 -10.75337,-19.58197 -15.74461,-29.56698 C 17.084397,287.70993 6.3285071,264.29046 -3.2708729,242.0201 -10.179573,227.04391 -14.404813,212.06765 -22.852863,198.24553 -62.402193,132.96901 -105.40856,93.419462 -171.4535,54.636068 c -14.20773,-8.062621 -31.10133,-11.519386 -49.14892,-15.742191 -9.59705,-0.385445 -19.199,-1.151443 -28.79857,-1.536888 -6.1427,-2.688373 -12.28784,-9.982498 -17.66455,-13.439294 -21.88243,-13.824729 -78.33046,-43.772305 -94.45805,-4.222805 -10.36795,24.958763 15.3592,49.531905 24.19015,62.205129 6.53058,8.831075 14.97619,18.813551 19.58444,28.798591 2.68836,6.52327 3.45435,13.43928 6.14271,20.35044 6.14513,16.89121 11.90239,35.70954 19.96743,51.45435 4.22524,8.06262 8.83105,16.51066 14.20774,23.80473 3.07134,4.2228 8.4456,6.14514 9.59948,13.05629 -5.37424,7.67957 -5.75969,19.199 -8.83349,28.79857 -13.82229,43.38913 -8.44561,97.14647 11.1364,129.0162 6.1427,9.59707 20.7358,30.72084 40.31796,22.65582 17.27909,-6.91118 13.43928,-28.79857 18.43054,-47.99757 1.1539,-4.61068 0.38544,-7.67957 2.68835,-10.75095 0.002,0.38301 0,0.76844 0,0.76844 5.37668,10.75095 10.75095,21.11897 15.74219,31.86974 11.90483,18.81355 32.63836,38.39797 49.91734,51.45439 9.21894,6.90868 16.51308,18.81356 28.03243,23.03878 0,-0.38791 0,-0.76846 0,-1.1539 -0.38545,0 -0.38545,0 -0.76844,0 -2.30534,-3.45677 -5.75969,-4.99126 -8.83105,-7.67957 -6.91116,-6.91116 -14.59319,-15.35923 -19.96743,-23.03878 -16.1252,-21.50442 -30.3354,-45.30913 -43.00617,-69.88473 -6.1427,-11.90239 -11.51938,-24.95879 -16.51064,-36.86114 -2.30534,-4.61067 -2.30534,-11.51939 -6.14514,-13.82228 -5.75969,8.44559 -14.2053,15.74219 -18.43054,26.11016 -7.29171,16.51064 -8.0626,36.86113 -10.75095,57.97988 -1.53448,0.38546 -0.76846,0 -1.53691,0.76847 -12.28541,-3.0738 -16.51065,-15.74219 -21.11898,-26.4956 -11.51939,-27.26153 -13.43928,-71.03632 -3.45435,-102.52061 2.68835,-8.06504 14.20774,-33.40678 9.59949,-41.08639 -2.30291,-7.29661 -9.98494,-11.51939 -14.20774,-17.27908 -4.99126,-7.2966 -10.36794,-16.51065 -13.82229,-24.5756 -9.2165,-21.50195 -13.82473,-45.30913 -23.80719,-66.81355 -4.60825,-9.984938 -12.67085,-20.350443 -19.199,-29.564528 -7.29414,-10.367922 -15.3592,-17.664524 -21.11897,-29.952406 -1.91747,-4.222805 -4.60825,-11.133941 -1.53689,-15.742211 0.76845,-3.071331 2.3029,-4.222794 5.37668,-4.991249 4.99126,-4.225241 19.199,1.151443 24.19015,3.45436 14.20774,5.757237 26.11016,11.136398 38.01499,19.198998 5.37425,3.839795 11.13394,11.136397 18.0451,13.056295 2.68835,0 5.37668,0 8.06503,0 12.28784,2.685916 26.11016,0.768413 37.62954,4.222804 20.35288,6.525712 38.78093,16.127636 55.29417,26.4956 50.30279,31.869747 91.769647,77.181347 119.802277,131.321657 4.60825,8.82862 6.52571,16.89607 10.75095,26.11016 8.06504,18.81599 18.0475301,38.01498 26.1101501,56.44555 8.0626,18.04509 15.7421899,36.47813 27.2615399,51.45435 5.76213,8.06018 28.79854,12.2854 39.16634,16.51064 7.6796,3.45437 19.5845,6.52817 26.4956,10.75096 13.053903,8.06016 26.110203,17.27912 38.398003,26.11015 6.1451,4.60583 25.3417,14.20776 26.4956,21.88493 l 1e-4,-4e-5 z"
+                                 style="fill:#00546b"
+                                 id="path16"
+                                 inkscape:connector-curvature="0" /><path
+                                 d="m -235.5806,94.951482 c -6.52814,0 -11.13394,0.77089 -15.74219,1.92236 0,-0.002 0,0.38544 0,0.76845 0.38545,0 0.38301,0 0.76846,0 3.07379,6.142698 8.44561,10.367938 12.2854,15.742168 3.0738,6.1427 5.75969,12.28786 8.83349,18.433 0.38299,-0.38545 0.766,-0.76845 0.766,-0.76845 5.37914,-3.84224 8.06504,-9.98494 8.06504,-19.199 -2.30535,-2.68835 -2.68836,-5.37669 -4.60825,-8.06504 -2.30291,-3.842248 -7.29661,-5.759688 -10.36795,-8.833488 l 0,0 z"
+                                 style="fill:#00546b"
+                                 id="path18"
+                                 inkscape:connector-curvature="0" /></g>
+                            </svg>
+                        </div>
+                        <div class="box-info color white">
+                            Mysql
+                        </div>
+                    </fugure>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="container-fluid" fx-page fx-number="3">
+        <img class="fx-fixed fx-neutral fx-top fx-left fx-banner-parallax" src="image/SplitShire_Torino_Piazza_Vittorio.jpg"/>
+        <div class="fx-window">
+            <section class="col l12 m12">
+                <div class="col l8 m12 offset-l2">
+                    <h2 class="fx-text-cente color text cyan fx-text-center fx-text-xx">
+                        Jobs
+                        <i class="fx-icons-folder"></i>
+                    </h2>
+                    <article class="col l12 m12">
+                        <br/>
+                        <br/>
+                        <span class="fx-alert-attention">
+                            <i class="fx-icons-error"></i>
+                            Ops! Ainda não há nada no meu portfólio mas em breve terá!
+                        </span>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </section>
+    <nav class="fx-fixed fx-left fx-marks-banner">
+        <ul>
+        </ul>
+    </nav>
+    <div class="box-clock clock-right">
+        <div class="clock initialised">
+            <div class="hours" style="-webkit-transform:rotate(369deg); transform:rotate(369deg);"></div>
+            <div class="minutes" style="-webkit-transform:rotate(109.6deg); transform:rotate(109.6deg);"></div>
+            <div class="seconds" style="-webkit-transform:rotate(96deg); transform:rotate(96deg);"></div>
+        </div>
+        <svg viewBox="0 0 210 210" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="105" cy="105" r="100" transform="rotate(-90 105 105)"></circle>
+        </svg>
+    </div>
+    <i id="mouse-fixed-icon" class="fx-fixed col l12 m12 t12 s12 i12 fx-text-center">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 611.999 611.999" style="enable-background:new 0 0 611.999 611.999;" xml:space="preserve">
+    <g>
+        <g id="Mouse">
+            <path class="azul" d="M485.644,179.051c-101.209,94.275-258.079,94.275-359.288,0c-18.991,101.765-22.934,205.767-11.699,308.677
+                c5.013,45.916,34.954,85.319,77.85,102.448c72.864,29.097,154.123,29.097,226.987,0c42.896-17.129,72.837-56.532,77.85-102.448
+                C508.577,384.818,504.635,280.816,485.644,179.051z"/>
+            <path class="fx-effect-plin" fill="#D8FF00" d="M293.508,72.385c0,30.812,0,61.622,0,92.434c0,6.899,5.592,12.491,12.491,12.491s12.491-5.592,12.491-12.491
+                c0-30.812,0-61.622,0-92.434c0-6.899-5.592-12.491-12.491-12.491S293.508,65.486,293.508,72.385z"/>
+            <path class="azul" d="M330.981,72.385c0,30.812,0,61.622,0,92.434c0,11.392-7.707,21.341-18.737,24.189c0,16.061,0,32.121,0,48.182
+                c64.054-1.594,125.076-27.618,170.567-72.741c-7.401-36.778-16.691-72.908-27.948-108.694
+                c-4.364-13.873-14.556-25.156-27.915-30.903C390.676,9.245,351.725,0.806,312.245,0c0,16.065,0,32.131,0,48.196
+                C323.276,51.044,330.981,60.993,330.981,72.385z"/>
+            <path class="azul" d="M299.754,189.008c-11.03-2.848-18.737-12.797-18.737-24.189c0-30.812,0-61.622,0-92.434
+                c0-11.392,7.707-21.341,18.737-24.189c0-16.065,0-32.131,0-48.196c-39.479,0.806-78.43,9.245-114.704,24.851
+                c-13.359,5.747-23.551,17.03-27.915,30.903c-11.257,35.787-20.547,71.916-27.948,108.694
+                c45.491,45.123,106.513,71.147,170.567,72.741C299.754,221.129,299.754,205.068,299.754,189.008z"/>
+        </g>
+    </g>
+    </svg>
+    </i>
+    <div id="contextmenu" class="fx-contextmenu fx-fixed color white" style="width: auto;height: auto;z-index: 999999999999999;display:none;">
+        <ul class="fx-custom-contextmenu">
+            <li>
+                <a download="MizaelWebDev.pdf" href="documentos/currículoMizael.pdf" class="fx-brand color text lead  fx-text-s">Baixe Meu Currículo</a>
+            </li>
+            <hr class="color yellow"/>
+            <li>
+                <a href="mailto: zxmaster01@gmail.com" class="fx-brand color text lead fx-text-s">Mande-me um E-Mail</a>
+            </li>
+        </ul>
+    </div>
+</body>
 </html>
